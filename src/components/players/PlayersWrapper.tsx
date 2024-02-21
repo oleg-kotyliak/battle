@@ -7,7 +7,7 @@ export const PlayersWrapper = ({battleResult}: {battleResult: BattleResult | nul
     const playerWins = (battleResult?.playerDamage || 0) < (battleResult?.enemyDamage || 0)
 
     return (
-        <Grid container justifyContent="space-between">
+        <Grid container justifyContent="space-between" spacing={2}>
             <Grid item xs={12} md={6}>
                 <PlayerCard playerName={'player'} winner={playerWins} damageHistory={battleResult?.playerDamageHistory || null} />
             </Grid>

@@ -2,6 +2,7 @@ import {useCalculateBattleResult} from "../../hooks/useCalculateBattleResult.tsx
 import {BATTLE_ROUNDS} from "../../constants/battle.ts";
 import {BattleResult} from "../../types/common.ts";
 import {Dispatch, FC, memo, SetStateAction, useEffect} from "react";
+import {Box} from "@mui/material";
 
 const battlePreset = {
     src: '/public/media/battle.gif',
@@ -24,7 +25,9 @@ export const BattleArena: FC<Props> = memo(({battleMatch, setMatch}) => {
 
     return (
         <>
-            {fightScene}
+            <Box display="flex" justifyContent="center">
+                {fightScene}
+            </Box>
         </>
     );
 });

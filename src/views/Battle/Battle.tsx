@@ -1,4 +1,4 @@
-import {Button, Grid, useTheme} from "@mui/material";
+import {Box, Button, Grid, useTheme} from "@mui/material";
 import {useState} from "react";
 import {BATTLE_ROUNDS, MS_PER_ROUND} from "../../constants/battle.ts";
 import {BattleResult} from "../../types/common.ts";
@@ -36,14 +36,16 @@ export const Battle = () => {
                 }
             }}
         >
-            <Grid item container alignItems="center" justifyContent="center">
+            <Grid item p={2}>
                 <PlayersWrapper battleResult={match} />
             </Grid>
-            <Grid item container alignItems="center" justifyContent="center">
+            <Grid item>
                 {isFighting && <BattleArena battleMatch={battleMatch} setMatch={setMatch} />}
             </Grid>
-            <Grid item container justifyContent="center" padding={2}>
-                <Button onClick={startBattle} disabled={isFighting} variant="contained">Start Battle</Button>
+            <Grid item>
+                <Box display="flex" justifyContent="center" p={2}>
+                    <Button onClick={startBattle} disabled={isFighting} variant="contained">Start Battle</Button>
+                </Box>
             </Grid>
         </Grid>
     );

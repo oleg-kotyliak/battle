@@ -18,4 +18,5 @@ export type BattleResult = {
     enemyDamageHistory: number[]
     playerFightLog: FightLog
     enemyFightLog: FightLog
+    playerWins: boolean
 }

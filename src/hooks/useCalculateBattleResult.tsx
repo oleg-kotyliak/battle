@@ -3,7 +3,7 @@ import {generateFightLog} from "../helpers/battle.ts";
 import {BattleResult, FightLog} from "../types/common.ts";
 
 export const useCalculateBattleResult = (rounds: number, battleMatch: number): BattleResult => {
-    const battleResult = useMemo(() => {
+    return useMemo(() => {
         const result = {
             playerDamage: 0,
             enemyDamage: 0,
@@ -30,8 +30,6 @@ export const useCalculateBattleResult = (rounds: number, battleMatch: number): B
             }
         }
 
-        return {...result, playerFightLog, enemyFightLog}
+        return {...result, playerFightLog, enemyFightLog, playerWins: result.playerDamage < result.enemyDamage}
     }, [rounds, battleMatch])
-
-    return battleResult
 };

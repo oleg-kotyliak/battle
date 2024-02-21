@@ -5,7 +5,7 @@ import {BATTLE_ROUNDS, INITIAL_HEALTH, MS_PER_ROUND} from "../../constants/battl
 type Props = {
     playerName: 'player' | 'enemy',
     damageHistory: number[] | null,
-    winner: boolean
+    winner: boolean | null
 }
 
 export const PlayerCard = ({playerName, damageHistory, winner}: Props) => {

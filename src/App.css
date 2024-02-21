@@ -1,0 +1,12 @@
+body {
+  /*background: #535bf2;*/
+  /*background: #408d24;*/
+  width: 100%;
+  min-width: 100% !important;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+}
